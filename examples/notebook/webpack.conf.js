@@ -4,10 +4,12 @@ module.exports = {
   output: {
     path: __dirname + '/build',
     filename: 'bundle.js',
-    publicPath: './build/'
+    publicPath: './build/',
+    library: 'jupyterlab',
+    libraryTarget: 'amd'
   },
   debug: true,
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   module: {
     loaders: [
       { test: /\.css$/, loader: 'style-loader!css-loader' },
